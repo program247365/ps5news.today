@@ -11,6 +11,7 @@ export default function SiteHead() {
             <meta name="msapplication-TileColor" content="#da532c"/>
             <meta name="msapplication-config" content="/images/favicons/browserconfig.xml"/>
             <meta name="theme-color" content="#ffffff"/>
+            <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="program247365" data-description="Support me on Buy me a coffee!" data-message="Like this site? Consider supporting me to keep adding great content." data-color="#79D6B5" data-position="" data-x_margin="18" data-y_margin="18"></script>
         </Head>
   );
 }
