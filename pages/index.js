@@ -1,5 +1,6 @@
 import Airtable from 'airtable';
 // import Nav from '../components/nav'
+import Hero from '../components/hero'
 
 // TODO: address - https://tailwindcss.com/docs/upcoming-changes
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
@@ -42,11 +43,8 @@ export default function IndexPage({ articles }) {
   return (
     <div>
       { /* <Nav /> */ }
-      <div className="py-5 grid items-center">
-        <h1 className="text-5xl text-center text-accent-1">
-          PS5 News Today
-        </h1>
-        <h2 className="text-2xl text-center text-accent-1">All the news you want on Sony's latest console.</h2>
+      <div className="grid items-center">
+        <Hero />
         <div className="flex flex-wrap overflow-hidden content-center justify-center">
           {articles.map((article) => (
             <Article
@@ -70,7 +68,7 @@ function Article({ title, url, date, time, image, excerpt, tags }) {
   const largeImageUrl = image[0]?.thumbnails?.large?.url; // TODO: fallback image for not one here
   return (
     <div className="relative bg-white border rounded-lg overflow-hidden sm:w-full sm:m-1 md:px-2 md:w-1/3 lg:px-0 lg:w-1/4 lg:m-1 xl:my-2 xl:m-1 xl:pb-4">
-    <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${largeImageUrl})` }}></div>
+    <a href={url} target="_blank" rel="noopener" ><div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${largeImageUrl})` }}></div></a>
       <div className="p-6">
         <h4 className="font-semibold text-lg leading-tight"><a href={url} target="_blank" rel="noopener">{title}</a></h4>
         <div className="mt-1">
