@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "airtable": "^0.10.0",
+    "count-it-down": "^1.0.0",
     "next": "latest",
     "next-seo": "^4.9.0",
     "react": "^16.13.1",

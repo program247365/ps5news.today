@@ -2022,6 +2022,11 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+count-it-down@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/count-it-down/-/count-it-down-1.0.0.tgz#180d7da9b94a56ce92a9ff2e3598fe5a2438c0eb"
+  integrity sha1-GA19qblKVs6Sqf8uNZj+WiQ4wOs=
+
 create-ecdh@^4.0.0:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"

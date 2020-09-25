@@ -1,3 +1,4 @@
+import Countdown from '../components/countdown'
 
 export default function Hero() {
     return (
@@ -14,9 +15,7 @@ export default function Hero() {
                     <p style={{ color: '#fdaf41'}} className="mt-3 text-base text-bolder sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                     Curated news on Sony's latest console.
                     </p>
-                    <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-
-                    </div>
+                    <Countdown />
                 </div>
                 </main>
             </div>
