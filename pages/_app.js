@@ -13,17 +13,13 @@ Router.events.on('routeChangeComplete', () => {
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    if (window.fathom !== undefined) {
-      const FATHOM_INCLUDE_URL = 'ps5news.today'
-      const FATHOM_TRACKING_JS_URL = '//stats.interweblabs.app/tracker.js'
-      // Initialize Fathom when the app loads
-      Fathom.load('XYAEY', {
-        includedDomains: [FATHOM_INCLUDE_URL],
-        excludedDomains: ['localhost:3000, localhost:3001, *.vercel.app'],
-        url: FATHOM_TRACKING_JS_URL,
-        honorDNT: true,
-      })
-    }
+    const FATHOM_TRACKING_JS_URL = '//stats.interweblabs.app/tracker.js'
+    // Initialize Fathom when the app loads
+    Fathom.load('XYAEY', {
+      excludedDomains: ["vercel.app", "now.sh", "localhost"],
+      url: FATHOM_TRACKING_JS_URL,
+      honorDNT: true,
+    })
   }, [])
 
   return (
