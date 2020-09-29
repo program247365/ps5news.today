@@ -6,7 +6,7 @@ import Head from '../components/siteHead'
 function MyApp({ Component, pageProps }) {
   const [isProd, setisProd] = React.useState(false);
   React.useEffect(() => {
-    const isProd = window?.location?.host.split(':')[0] === 'ps5news.today';
+    const isProd = window?.location?.host === 'ps5news.today';
   }, []);
 
   return (
