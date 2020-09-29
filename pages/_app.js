@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
   useEffect(() => {
-    if (typeof window.fathom !== 'undefined') {
+    if (typeof window.fathom === 'undefined') {
       const FATHOM_INCLUDE_URL = 'ps5news.today'
       const FATHOM_TRACKING_JS_URL = '//stats.interweblabs.app/tracker.js'
       // Initialize Fathom when the app loads
