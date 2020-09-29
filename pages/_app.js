@@ -7,14 +7,12 @@ import Head from '../components/siteHead'
 import * as Fathom from 'fathom-client'
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+
   useEffect(() => {
-    const router = useRouter()
-    const FATHOM_TRACKING_JS_URL = '//stats.interweblabs.app/tracker.js'
     // Initialize Fathom when the app loads
     Fathom.load('XYAEY', {
-      includedDomains: ['ps5news.today'],
-      excludedDomains: ["vercel.app", "now.sh", "localhost"],
-      url: FATHOM_TRACKING_JS_URL,
+      includedDomains: ['ps5news.today']
     })
 
     function onRouteChangeComplete() {
