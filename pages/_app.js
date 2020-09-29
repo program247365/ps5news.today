@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
   const [isProd, setisProd] = React.useState(false);
   React.useEffect(() => {
     const isProd = window?.location?.host === 'ps5news.today';
+    console.log('isProd', isProd);
   }, []);
 
   return (
