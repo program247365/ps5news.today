@@ -1,16 +1,21 @@
+const URL = 'https://ps5news.today'
+const ogImageURL = `${URL}/images/seo/PS5NewsToday-og-image.png`
+
 export default {
-    title: 'PS5 News Today',
-    description: 'Curated news on Sony\'s latest console.',
     openGraph: {
-      type: 'website',
-      locale: 'en_US',
-      url: 'https://ps5news.today',
       title: 'PS5 News Today',
       description: 'Curated news on Sony\'s latest console.',
-      image:
-        '/images/seo/PS5NewsToday-og-image.png',
+      type: 'website',
+      locale: 'en_US',
+      url: URL,
+      images: [
+        {
+          url: ogImageURL,
+          width: 1200,
+          height: 1200,
+          alt: 'PS5 News Today Logo',
+        },
+      ],
       site_name: 'PS5 News Today',
-      imageWidth: 1200,
-      imageHeight: 1200
     }
   };
