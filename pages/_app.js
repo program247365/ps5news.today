@@ -1,8 +1,9 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import SEO from '../next-seo.config'
 import { NextSeo } from 'next-seo'
 import '../styles/index.css'
 import Head from '../components/siteHead'
+import Router from 'next/router'
 import * as Fathom from 'fathom-client'
 
 // Record a pageview when route changes
