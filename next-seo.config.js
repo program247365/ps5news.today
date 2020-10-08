@@ -1,5 +1,5 @@
 const URL = 'https://ps5news.today'
-const ogImageURL = `${URL}/images/seo/PS5NewsToday-og-image.png`
+const ogImageURL = `${URL}/images/seo/ps5-og-image.png`
 
 export default {
     openGraph: {
