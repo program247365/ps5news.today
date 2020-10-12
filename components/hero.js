@@ -1,27 +1,26 @@
-import Countdown from '../components/countdown'
+import Countdown from './countdown'
 
 export default function Hero() {
     return (
         <div className="relative bg-white overflow-hidden">
         <div className="max-w-screen-xl mx-auto">
           <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-
-
             <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
               <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
-                    <a href="#" aria-label="Home">
+                    <a href="/" aria-label="Home">
                       <img className="h-8 w-auto sm:h-10" src="/images/logo/ps5-sm.png" alt="Logo" />
                     </a>
                   </div>
                 </div>
                 <div className="md:block md:ml-10 md:pr-4">
                   {/* <a href="#" className="ml-8 font-medium text-black-500 hover:text-black-900 transition duration-150 ease-in-out">Games</a>
-                  {/* <a href="#" className="ml-8 font-medium text-black-500 hover:text-black-900 transition duration-150 ease-in-out">Videos</a>
-                  <a href="#" className="ml-8 font-medium text-black-500 hover:text-black-900 transition duration-150 ease-in-out">Shop</a>
-                  {/* <a href="#" className="ml-8 font-medium text-black-500 hover:text-black-900 transition duration-150 ease-in-out">News</a>
-                  <a href="#" className="ml-8 font-medium text-black-600 hover:text-black-900 transition duration-150 ease-in-out">About</a> */ }
+                  {/* <a href="#" className="ml-8 font-medium text-black-500 hover:text-black-900 transition duration-150 ease-in-out">Videos</a> */ }
+                  <a href="/" className="ml-8 font-medium text-black-500 hover:text-black-900 transition duration-150 ease-in-out hover:bg-blue-accent rounded-md bg-orange-accent bg-opacity-25 p-2">Home</a>
+                  <a href="/shop" className="ml-8 font-medium text-black-500 hover:text-black-900 transition duration-150 ease-in-out hover:bg-blue-accent rounded-md bg-orange-accent bg-opacity-25 p-2">Shop</a>
+                  {/* <a href="#" className="ml-8 font-medium text-black-500 hover:text-black-900 transition duration-150 ease-in-out">News</a> */ }
+                  {/* <a href="#" className="ml-8 font-medium text-black-600 hover:text-black-900 transition duration-150 ease-in-out">About</a> */ }
                 </div>
               </nav>
             </div>
