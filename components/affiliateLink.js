@@ -6,9 +6,7 @@ export default function AffiliateLink({ title, url, date, imageURL, description,
         <div className="p-6">
           <h4 className="font-semibold text-lg leading-tight"><a href={url} target="_blank" rel="noopener">{title} @ {price}</a></h4>
           <div className="mt-1">
-          {!isAvailable ?
-            <a href={url} target="_blank" rel="noopener"><span className="text-gray-600 text-sm">Release Date: {date}</span></a>
-            : <a href={url} target="_blank" rel="noopener"><span className="text-gray-600 text-sm">Available Now!</span></a>}
+          {!isAvailable ? <span className="text-gray-600 text-sm">Release Date: {date}</span> : <span className="text-gray-600 text-sm">Available Now!</span> }
           {!isAvailable ?
             <a href={url} target="_blank" rel="noopener"><span className="focus-shadow-outline rounded-lg mt-2 block text-center text-black-600 text-lg bg-blue-accent">PREORDER</span></a>
             : <a href={url} target="_blank" rel="noopener"><span className="focus-shadow-outline hover:from-current rounded-lg mt-2 block text-center text-black text-lg bg-orange-accent">BUY</span></a>}
