@@ -37,7 +37,7 @@ export async function getStaticProps() {
       title: link.get('Title'),
       url: link.get('URL'),
       description: link.get('Description'),
-      date: new Date(link.get('ReleaseDate')).toLocaleDateString(),
+      date: link.get('ReleaseDate'),
       imageURL: link.get('ImageURL'),
       tags: link.get('Tags'),
       price: link.get('Price'),
