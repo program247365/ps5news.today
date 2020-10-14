@@ -1,6 +1,9 @@
-import Airtable from "airtable";
+import unified from 'unified'
+import parse from 'remark-parse'
+import remark2react from 'remark-react'
+import Airtable from "airtable"
 // import Nav from '../components/nav'
-import Hero from "../components/hero";
+import Hero from "../components/hero"
 
 // TODO: address - https://tailwindcss.com/docs/upcoming-changes
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
@@ -86,7 +89,9 @@ function Article({ title, url, date, time, image, excerpt, tags }) {
           </span>
         </div>
         <div className="mt-1">
-          <span className="text-gray-600 text-sm">{excerpt}</span>
+          <span className="text-gray-600 text-sm">
+            {unified().use(parse).use(remark2react).processSync(excerpt).result}
+          </span>
         </div>
       </div>
       <span className="text-black-100 font-semibold text-sm bg-yellow-400 sm:p-2 rounded-md p-1 xl:px-4 xl:mx-3 absolute top-0 right-0 m-3">

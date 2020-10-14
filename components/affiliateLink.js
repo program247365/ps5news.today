@@ -1,3 +1,7 @@
+import unified from "unified";
+import parse from "remark-parse";
+import remark2react from "remark-react";
+
 export default function AffiliateLink({
   title,
   url,
@@ -44,7 +48,12 @@ export default function AffiliateLink({
           )}
         </div>
         <div className="mt-1">
-          <span className="text-gray-600 text-sm">{description}</span>
+          <span className="text-gray-600 text-sm">
+            {
+              unified().use(parse).use(remark2react).processSync(description)
+                .result
+            }
+          </span>
         </div>
       </div>
       <span className="text-black-100 font-semibold text-sm bg-yellow-400 sm:p-2 rounded-md p-1 xl:px-4 xl:mx-3 absolute top-0 right-0 m-3">
