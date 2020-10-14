@@ -48,7 +48,7 @@ export default function Countdown() {
         {timerComponents.length ? (
           timerComponents
         ) : (
-          <span>PS5 is here in North</span>
+          <span>PS5 is here in North America!</span>
         )}
       </span>
     </div>
