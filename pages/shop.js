@@ -23,6 +23,7 @@ export async function getStaticProps() {
         "ImageURL",
         "Tags",
         "Price",
+        "Status",
       ],
       sort: [
         {
@@ -30,6 +31,7 @@ export async function getStaticProps() {
           direction: "desc",
         },
       ],
+      filterByFormula: "{Status} = 'Published'",
     })
     .all();
 
