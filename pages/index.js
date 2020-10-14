@@ -1,6 +1,6 @@
-import Airtable from 'airtable';
+import Airtable from "airtable";
 // import Nav from '../components/nav'
-import Hero from '../components/hero'
+import Hero from "../components/hero";
 
 // TODO: address - https://tailwindcss.com/docs/upcoming-changes
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
@@ -15,20 +15,20 @@ export async function getStaticProps() {
   const records = await airtable
     .base(AIRTABLE_BASE_ID)(AIRTABLE_BASE_NAME)
     .select({
-      fields: ['Page Title', 'URL', 'Article Date', 'Image', 'Excerpt', 'Tags'],
-      sort: [{field: "Article Date", direction: "desc"}],
+      fields: ["Page Title", "URL", "Article Date", "Image", "Excerpt", "Tags"],
+      sort: [{ field: "Article Date", direction: "desc" }],
     })
     .all();
 
   const articles = records.map((article) => {
     return {
-      title: article.get('Page Title'),
-      url: article.get('URL'),
-      date: new Date(article.get('Article Date')).toLocaleDateString(),
-      time: new Date(article.get('Article Date')).toLocaleTimeString(),
-      image: article.get('Image'),
-      excerpt: article.get('Excerpt'),
-      tags: article.get('Tags'),
+      title: article.get("Page Title"),
+      url: article.get("URL"),
+      date: new Date(article.get("Article Date")).toLocaleDateString(),
+      time: new Date(article.get("Article Date")).toLocaleTimeString(),
+      image: article.get("Image"),
+      excerpt: article.get("Excerpt"),
+      tags: article.get("Tags"),
     };
   });
 
@@ -42,7 +42,7 @@ export async function getStaticProps() {
 export default function IndexPage({ articles }) {
   return (
     <div>
-      { /* <Nav /> */ }
+      {/* <Nav /> */}
       <div className="grid items-center">
         <Hero />
         <div className="flex flex-wrap overflow-hidden content-center justify-center">
@@ -58,28 +58,40 @@ export default function IndexPage({ articles }) {
               tags={article.tags}
             />
           ))}
-      </div>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
 function Article({ title, url, date, time, image, excerpt, tags }) {
   const largeImageUrl = image[0]?.thumbnails?.large?.url; // TODO: fallback image for not one here
   return (
     <div className="relative bg-white border rounded-lg overflow-hidden sm:w-full sm:m-1 md:px-2 md:w-1/3 lg:px-0 lg:w-1/4 lg:m-1 xl:my-2 xl:m-1 xl:pb-4">
-    <a href={url} target="_blank" rel="noopener" ><div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${largeImageUrl})` }}></div></a>
+      <a href={url} target="_blank" rel="noopener">
+        <div
+          className="h-48 bg-cover bg-center"
+          style={{ backgroundImage: `url(${largeImageUrl})` }}
+        ></div>
+      </a>
       <div className="p-6">
-        <h4 className="font-semibold text-lg leading-tight"><a href={url} target="_blank" rel="noopener">{title}</a></h4>
+        <h4 className="font-semibold text-lg leading-tight">
+          <a href={url} target="_blank" rel="noopener">
+            {title}
+          </a>
+        </h4>
         <div className="mt-1">
-          <span className="text-gray-600 text-sm">{date} @ {time}</span>
+          <span className="text-gray-600 text-sm">
+            {date} @ {time}
+          </span>
         </div>
         <div className="mt-1">
           <span className="text-gray-600 text-sm">{excerpt}</span>
         </div>
       </div>
-      <span className="text-black-100 font-semibold text-sm bg-yellow-400 sm:p-2 rounded-md p-1 xl:px-4 xl:mx-3 absolute top-0 right-0 m-3">{tags}</span>
+      <span className="text-black-100 font-semibold text-sm bg-yellow-400 sm:p-2 rounded-md p-1 xl:px-4 xl:mx-3 absolute top-0 right-0 m-3">
+        {tags}
+      </span>
     </div>
   );
 }
-
