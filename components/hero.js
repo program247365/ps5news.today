@@ -40,7 +40,7 @@ export default function Hero() {
           </div>
           <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="text-center">
-              <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 PS5 News
                 <span
                   style={{ color: "#27ccfc" }}
@@ -49,13 +49,13 @@ export default function Hero() {
                   {" "}
                   Today
                 </span>
-              </h2>
-              <p
+              </h1>
+              <h2
                 style={{ color: "#fdaf41" }}
                 className="mt-3 text-base text-bolder sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
               >
                 Curated news on Sony&apos;s latest console.
-              </p>
+              </h2>
               <Countdown />
             </div>
           </main>

@@ -80,11 +80,11 @@ function Article({ title, url, date, time, image, excerpt, tags }) {
         ></div>
       </a>
       <div className="p-6">
-        <h4 className="font-semibold text-lg leading-tight">
+        <h3 className="font-semibold text-lg leading-tight">
           <a href={url} target="_blank" rel="noopener">
             {title}
           </a>
-        </h4>
+        </h3>
         <div className="mt-1">
           <span className="text-gray-600 text-sm">
             {date} @ {time}
