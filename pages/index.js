@@ -4,6 +4,7 @@ import remark2react from 'remark-react'
 import Airtable from "airtable"
 // import Nav from '../components/nav'
 import Hero from "../components/hero"
+import Head from "../components/siteHead"
 
 // TODO: address - https://tailwindcss.com/docs/upcoming-changes
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
@@ -45,6 +46,7 @@ export async function getStaticProps() {
 export default function IndexPage({ articles }) {
   return (
     <div>
+      <Head title="Homepage" />
       {/* <Nav /> */}
       <div className="grid items-center">
         <Hero />

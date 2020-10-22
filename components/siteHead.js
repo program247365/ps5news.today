@@ -3,7 +3,7 @@ import Head from "next/head";
 const isProd =
   typeof window !== "undefined" && window.location.host === "ps5news.today";
 
-export default function SiteHead() {
+export default function SiteHead({title}) {
   return (
     <Head>
       <link
@@ -31,6 +31,7 @@ export default function SiteHead() {
         content="/images/favicons/browserconfig.xml"
       />
       <meta name="theme-color" content="#ffffff" />
+      <title>PS5 News Today - {title}</title>
       {isProd && (
         <script
           dangerouslySetInnerHTML={{
