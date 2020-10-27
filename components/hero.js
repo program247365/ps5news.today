@@ -1,4 +1,5 @@
 import Countdown from "./countdown";
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -10,9 +11,11 @@ export default function Hero() {
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div className="flex items-center justify-between w-full md:w-auto">
                   <a href="/" aria-label="Home">
-                    <img
+                    <Image
                       className="h-8 w-auto sm:h-10"
                       src="/images/logo/ps5-sm.png"
+                      height="100"
+                      width="100"
                       alt="Logo"
                     />
                   </a>
@@ -61,9 +64,11 @@ export default function Hero() {
           </main>
         </div>
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:block lg:block hidden">
-          <img
+          <Image
             className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             src="/images/logo/ps5-lg.png"
+            width="1000"
+            height="1000"
             alt="PS5 Illustration"
           />
         </div>

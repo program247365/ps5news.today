@@ -5,6 +5,7 @@ import Airtable from "airtable"
 // import Nav from '../components/nav'
 import Hero from "../components/hero"
 import Head from "../components/siteHead"
+import Image from 'next/image'
 
 // TODO: address - https://tailwindcss.com/docs/upcoming-changes
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
@@ -74,10 +75,12 @@ function Article({ title, url, date, time, image, excerpt, tags }) {
   return (
     <div className="relative bg-white border rounded-lg overflow-hidden sm:w-full sm:m-1 md:px-2 md:w-1/3 lg:px-0 lg:w-1/4 lg:m-1 xl:my-2 xl:m-1 xl:pb-4">
       <a href={url} target="_blank" rel="noopener">
-        <div
+        <Image
           className="h-48 bg-cover bg-center"
-          style={{ backgroundImage: `url(${largeImageUrl})` }}
-        ></div>
+          src={largeImageUrl}
+          width="385"
+          height="235"
+        ></Image>
       </a>
       <div className="p-6">
         <h3 className="font-semibold text-lg leading-tight">

@@ -1,6 +1,7 @@
 import unified from "unified";
 import parse from "remark-parse";
 import remark2react from "remark-react";
+import Image from "next/image";
 
 export default function AffiliateLink({
   title,
@@ -16,10 +17,11 @@ export default function AffiliateLink({
   return (
     <div className="relative bg-white border rounded-lg overflow-hidden sm:w-full sm:m-1 md:px-2 md:w-1/3 lg:px-0 lg:w-1/4 lg:m-1 xl:my-2 xl:m-1 xl:pb-4">
       <a href={url} target="_blank" rel="noopener">
-        <div
+        <Image
           className="h-48 bg-no-repeat bg-center"
-          style={{ backgroundImage: `url(${imageURL})` }}
-        ></div>
+          unsized
+          src={imageURL}
+        ></Image>
       </a>
       <div className="p-6">
         <h4 className="font-semibold text-lg leading-tight">
