@@ -1,6 +1,6 @@
 # PS5 News Today
 
-> https://ps5news.today - curated PS5 news
+> https://ps5news.com - curated PS5 news
 
 ## Tech Stack
 

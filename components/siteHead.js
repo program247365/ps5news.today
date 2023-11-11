@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const isProd =
-  typeof window !== "undefined" && window.location.host === "ps5news.today";
+  typeof window !== "undefined" && window.location.host === "ps5news.com";
 
 export default function SiteHead({title}) {
   return (

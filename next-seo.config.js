@@ -1,4 +1,4 @@
-const URL = 'https://ps5news.today'
+const URL = 'https://ps5news.com'
 const ogImageURL = `${URL}/images/seo/ps5-og-image.png`
 
 export default {
