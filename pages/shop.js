@@ -1,8 +1,8 @@
 // TODO: Make template shared across pages
-import Airtable from "airtable"
-import Hero from "../components/hero"
-import AffiliateLink from "../components/affiliateLink"
-import Head from "../components/siteHead"
+import Airtable from "airtable";
+import Hero from "../components/hero";
+import AffiliateLink from "../components/affiliateLink";
+import Head from "../components/siteHead";
 
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
@@ -10,7 +10,9 @@ const AIRTABLE_BASE_NAME = "AffiliateLinks";
 const PAGE_TITLE = "Shop PS5 Consoles, Accessories, and Games";
 
 export async function getStaticProps() {
-  const airtable = Airtable.configure({ apiKey: AIRTABLE_API_KEY });
+  const airtable = new Airtable({
+    apiKey: AIRTABLE_API_KEY,
+  });
 
   const records = await airtable
     .base(AIRTABLE_BASE_ID)(AIRTABLE_BASE_NAME)
@@ -57,7 +59,7 @@ export async function getStaticProps() {
 export default function ShopPage({ links }) {
   return (
     <div>
-    <Head title={PAGE_TITLE} />
+      <Head title={PAGE_TITLE} />
       {/* <Nav /> */}
       <div className="grid items-center">
         <Hero />
