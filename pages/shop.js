@@ -10,9 +10,7 @@ const AIRTABLE_BASE_NAME = "AffiliateLinks";
 const PAGE_TITLE = "Shop PS5 Consoles, Accessories, and Games";
 
 export async function getStaticProps() {
-  const airtable = new Airtable({
-    apiKey: AIRTABLE_API_KEY,
-  });
+  const airtable = Airtable.configure({ apiKey: AIRTABLE_API_KEY });
 
   const records = await airtable
     .base(AIRTABLE_BASE_ID)(AIRTABLE_BASE_NAME)
